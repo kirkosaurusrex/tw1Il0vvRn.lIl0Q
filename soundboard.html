@@ -72,7 +72,16 @@
   <audio id="fah2" src="i-got-this-fahhhhhh.mp3"></audio>
 
   <script>
+    function stopAllSounds() {
+      const audios = document.querySelectorAll('audio');
+      audios.forEach(a => {
+        a.pause();
+        a.currentTime = 0;
+      });
+    }
+
     function playSound(id) {
+      stopAllSounds(); // stop any sound already playing
       const audio = document.getElementById(id);
       audio.currentTime = 0;
       audio.play();
