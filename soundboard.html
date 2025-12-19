@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Soundboard</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background: #111;
+      color: #fff;
+      padding-top: 40px;
+    }
+    button {
+      margin: 10px;
+      padding: 15px 25px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 6px;
+      background: #00ffcc;
+      color: #000;
+      transition: 0.2s;
+    }
+    button:hover {
+      background: #ff00aa;
+      color: #fff;
+    }
+    .navbar {
+      background: #111;
+      padding: 15px;
+      text-align: center;
+      border-bottom: 2px solid #00ffcc;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+    .navbar a {
+      color: #00ffcc;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 20px;
+      transition: 0.3s;
+    }
+    .navbar a:hover {
+      color: #ff00aa;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="games.html">Games</a>
+    <a href="soundboard.html">Soundboard</a>
+  </div>
+
+  <h1>Soundboard</h1>
+
+  <button onclick="playSound('fah1')">FAHHHHHHHH</button>
+  <button onclick="playSound('diddy')">WHAT IS THIS DIDDY BLUD</button>
+  <button onclick="playSound('speed')">Please Speed I Need This</button>
+  <button onclick="playSound('charlie')">We Are Charlie Kirk</button>
+  <button onclick="playSound('fah2')">I Got This Fahhhhh</button>
+
+  <!-- Audio Files -->
+  <audio id="fah1" src="fahhhhhhhhhhhhhh.mp3"></audio>
+  <audio id="diddy" src="what-is-this-diddy-blud-doing-on-the.mp3"></audio>
+  <audio id="speed" src="please-speed-i-need-this.mp3"></audio>
+  <audio id="charlie" src="we-are-charlie-kirk-song.mp3"></audio>
+  <audio id="fah2" src="i-got-this-fahhhhhh.mp3"></audio>
+
+  <script>
+    function playSound(id) {
+      const audio = document.getElementById(id);
+      audio.currentTime = 0;
+      audio.play();
+    }
+  </script>
+
+</body>
+</html>
