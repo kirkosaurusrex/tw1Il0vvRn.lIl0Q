@@ -8,37 +8,47 @@
       background: #0d0d0d;
       color: #00ffcc;
       font-family: monospace;
+      margin: 0;
+      padding: 0;
       text-align: center;
-      padding-top: 10%;
     }
-    h1 {
-      font-size: 3em;
-      margin-bottom: 40px;
+
+    /* Navigation bar */
+    .navbar {
+      background: #111;
+      padding: 15px;
+      text-align: center;
+      border-bottom: 2px solid #00ffcc;
     }
-    .button {
-      display: inline-block;
-      margin: 15px;
-      padding: 20px 40px;
-      font-size: 18px;
-      color: #0d0d0d;
-      background: #00ffcc;
-      border: none;
-      border-radius: 8px;
+
+    .navbar a {
+      color: #00ffcc;
       text-decoration: none;
+      margin: 0 20px;
+      font-size: 20px;
       transition: 0.3s;
     }
-    .button:hover {
-      background: #ff00aa;
-      color: #fff;
+
+    .navbar a:hover {
+      color: #ff00aa;
+    }
+
+    h1 {
+      margin-top: 80px;
+      font-size: 3em;
     }
   </style>
 </head>
-<body>
-  <h1>Kirkosaurusrex - Alpha</h1>
 
-  <a class="button" href="moto.html">Play Moto X3M</a>
-  <a class="button" href="battle.html">Play The Last .io</a>
-  <a class="button" href="lovetester.html">Play Love Tester</a>
-  <a class="button" href="soundboard.html">Open Soundboard</a>
+<body>
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="games.html">Games</a>
+    <a href="soundboard.html">Soundboard</a>
+  </div>
+
+  <h1>Kirkosaurusrex - Alpha</h1>
+  <p>the best games website (almost)</p>
 </body>
 </html>
+
