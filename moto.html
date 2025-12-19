@@ -2,12 +2,18 @@
 <html>
 <head><title>Moto X3M</title></head>
 <body style="margin:0; background:#111;">
-<iframe 
-  src="https://moto-x3mgame.github.io/"
-  style="width:100vw; height:100vh; border:none;"
-  allowfullscreen
-  webkitallowfullscreen
-  mozallowfullscreen>
-</iframe>
+
+<div id="loader" style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:#111;color:#00ffcc;display:flex;justify-content:center;align-items:center;font-size:32px;font-family:monospace;z-index:10;">Loading...</div>
+
+<button id="fsbtn" style="position:fixed;top:20px;right:20px;padding:10px 20px;background:#00ffcc;color:#000;border:none;border-radius:6px;font-size:16px;cursor:pointer;z-index:20;">Fullscreen</button>
+
+<iframe id="gameframe" src="https://moto-x3mgame.github.io/" style="width:100vw;height:100vh;border:none;" allowfullscreen></iframe>
+
+<script>
+document.getElementById("gameframe").addEventListener("load",()=>{document.getElementById("loader").style.display="none";});
+document.getElementById("fsbtn").onclick=()=>{document.getElementById("gameframe").requestFullscreen();};
+document.addEventListener("keydown",e=>{if(e.key.toLowerCase()==="q"){document.body.innerHTML="<h1 style='color:white;text-align:center;margin-top:20%;font-family:monospace;'>Nothing to see here.</h1>";}});
+</script>
+
 </body>
 </html>
