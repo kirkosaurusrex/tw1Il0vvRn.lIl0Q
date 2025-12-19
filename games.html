@@ -2,31 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Kirkosaurusrex</title>
+  <title>Games</title>
   <style>
     body {
       background: #0d0d0d;
       color: #00ffcc;
       font-family: monospace;
       text-align: center;
-      padding-top: 50px;
+      padding-top: 120px;
+      margin: 0;
     }
-    .button {
-      display: inline-block;
-      margin: 15px;
-      padding: 20px 40px;
-      font-size: 18px;
-      color: #0d0d0d;
-      background: #00ffcc;
-      border: none;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-    .button:hover {
-      background: #ff00aa;
-      color: #fff;
-    }
+
     .navbar {
       background: #111;
       padding: 15px;
@@ -35,7 +21,9 @@
       position: fixed;
       top: 0;
       width: 100%;
+      z-index: 10;
     }
+
     .navbar a {
       color: #00ffcc;
       text-decoration: none;
@@ -43,8 +31,43 @@
       font-size: 20px;
       transition: 0.3s;
     }
+
     .navbar a:hover {
       color: #ff00aa;
+    }
+
+    #search {
+      width: 60%;
+      padding: 12px;
+      font-size: 18px;
+      border-radius: 8px;
+      border: none;
+      margin-bottom: 20px;
+      outline: none;
+    }
+
+    .category-title {
+      font-size: 28px;
+      margin-top: 40px;
+      color: #ff00aa;
+    }
+
+    .button {
+      display: inline-block;
+      margin: 10px;
+      padding: 15px 30px;
+      font-size: 18px;
+      color: #0d0d0d;
+      background: #00ffcc;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background: #ff00aa;
+      color: #fff;
     }
   </style>
 </head>
@@ -57,21 +80,35 @@
     <a href="soundboard.html">Soundboard</a>
   </div>
 
-  <h1>Games</h1>
+  <input id="search" type="text" placeholder="Search games...">
 
-  <a class="button" href="moto.html">Moto X3M</a>
-  <a class="button" href="battle.html">The Last Royale</a>
-  <a class="button" href="retrobowl.html">Retro Bowl</a>
-  <a class="button" href="retrobowlcollege.html">Retro Bowl College</a>
-  <a class="button" href="drivemad.html">Drive Mad</a>
-  <a class="button" href="monkeymart.html">Monkey Mart</a>
-  <a class="button" href="subway.html">Subway Surfers</a>
-  <a class="button" href="stickmanhook.html">Stickman Hook</a>
-  <a class="button" href="basketballstars.html">Basketball Stars</a>
-  <a class="button" href="ragdollarchers.html">Ragdoll Archers</a>
-  <a class="button" href="ragdollhit.html">Ragdoll Hit</a>
-  <a class="button" href="ragdolldrop.html">Ragdoll Drop</a>
-  <a class="button" href="evoworld.html">Evoworld.io</a>
+  <!-- SPORTS -->
+  <div class="category-title">Sports</div>
+  <div class="game button" data-name="basketball stars" onclick="location.href='basketballstars.html'">Basketball Stars</div>
+  <div class="game button" data-name="retro bowl" onclick="location.href='retrobowl.html'">Retro Bowl</div>
+  <div class="game button" data-name="retro bowl college" onclick="location.href='retrobowlcollege.html'">Retro Bowl College</div>
 
-</body>
-</html>
+  <!-- ACTION -->
+  <div class="category-title">Action</div>
+  <div class="game button" data-name="drive mad" onclick="location.href='drivemad.html'">Drive Mad</div>
+  <div class="game button" data-name="stickman hook" onclick="location.href='stickmanhook.html'">Stickman Hook</div>
+  <div class="game button" data-name="subway surfers" onclick="location.href='subway.html'">Subway Surfers</div>
+
+  <!-- RAGDOLL -->
+  <div class="category-title">Ragdoll Games</div>
+  <div class="game button" data-name="ragdoll archers" onclick="location.href='ragdollarchers.html'">Ragdoll Archers</div>
+  <div class="game button" data-name="ragdoll hit" onclick="location.href='ragdollhit.html'">Ragdoll Hit</div>
+  <div class="game button" data-name="ragdoll drop" onclick="location.href='ragdolldrop.html'">Ragdoll Drop</div>
+
+  <!-- IO GAMES -->
+  <div class="category-title">IO Games</div>
+  <div class="game button" data-name="evoworld" onclick="location.href='evoworld.html'">Evoworld.io</div>
+  <div class="game button" data-name="the last royale" onclick="location.href='battle.html'">The Last Royale</div>
+
+  <!-- OTHER -->
+  <div class="category-title">Other</div>
+  <div class="game button" data-name="moto x3m" onclick="location.href='moto.html'">Moto X3M</div>
+  <div class="game button" data-name="monkey mart" onclick="location.href='monkeymart.html'">Monkey Mart</div>
+
+  <script>
+   
